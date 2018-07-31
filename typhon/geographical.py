@@ -1,7 +1,23 @@
-# -*- coding: utf-8 -*-
-
-"""General functions for manipulating geographical data.
 """
+=========================================
+Geographical (:mod:`typhon.geographical`)
+=========================================
+
+General functions for manipulating geographical data.
+
+.. currentmodule:: typhon.geographical
+
+.. autosummary::
+   :toctree: generated
+
+   area_weighted_mean
+   to_kilometers
+   GeoIndex
+   gridded_mean
+   sea_mask
+
+"""
+
 from numbers import Number
 
 import imageio
@@ -14,6 +30,7 @@ from typhon.utils import split_units
 
 __all__ = [
     'area_weighted_mean',
+    'to_kilometers',
     'GeoIndex',
     'gridded_mean',
     'sea_mask'
@@ -387,5 +404,4 @@ def sea_mask(lat, lon, mask):
     lon_cell = lon / mask_lon_step
 
     return mask[lat_cell.astype(int), lon_cell.astype(int)]
-
 
