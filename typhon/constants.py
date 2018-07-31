@@ -1,5 +1,9 @@
-# -*- coding: utf-8 -*-
-"""Collection of physical constants and conversion factors.
+"""
+===================================
+Constants (:mod:`typhon.constants`)
+===================================
+
+Collection of physical constants and conversion factors.
 
 Physical constants
 ==================
