@@ -1,4 +1,19 @@
-"""Various statistical functions
+"""
+Statistics
+==========
+
+Various statistical functions
+
+.. currentmodule:: typhon.math
+
+.. autosummary::
+   :toctree: generated
+
+   adev
+   bin
+   bin_nd
+   corrcoef
+   get_distribution_as_percentiles
 
 """
 

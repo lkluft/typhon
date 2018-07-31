@@ -1,7 +1,20 @@
-# -*- coding: utf-8 -*-
-
-"""Common functions for typhon.math.
 """
+.. currentmodule:: typhon.math
+
+.. autosummary::
+   :toctree: generated
+
+   calculate_precisely
+   cantor_pairing
+   integrate_column
+   interpolate_halflevels
+   nlogspace
+   promote_maximally
+   sum_digits
+   squeezable_logspace
+
+"""
+
 import numpy as np
 import functools
 
@@ -18,21 +31,22 @@ __all__ = [
 
 
 def cantor_pairing(a, b, ):
-    """Create an unique number from two natural numbers
+    r"""Create an unique number from two natural numbers
 
     For more information about the Cantor pairing function, have a look at:
     https://en.wikipedia.org/wiki/Pairing_function
 
     This create an unique number from two natural numbers according to
+
     .. math::
         \pi (a,b):={\frac{1}{2}}(a+b)(a+b+1)+b.
 
     Args:
-        a: A numpy.array with natural numbers, i.e. unsigned integer.
-        b: A numpy.array with natural numbers, i.e. unsigned integer.
+        a (ndarray): Array with natural numbers, i.e. unsigned integer.
+        b (ndarray): Array with natural numbers, i.e. unsigned integer.
 
     Returns:
-        A numpy.array with the unique values.
+        ndarray: Array with the unique values.
     """
 
     a_b_sum = a + b
@@ -66,7 +80,7 @@ def integrate_column(y, x=None, axis=0):
 
 
 def interpolate_halflevels(x, axis=0):
-    """Returns the linear inteprolated halflevels for given array.
+    """Returns the linear interpolated halflevels for given array.
 
     Parameters:
         x (ndarray): Data array.
@@ -90,7 +104,7 @@ def sum_digits(n):
        n (int): Number.
 
     Returns:
-        int: Sum of digitis of n.
+        int: Sum of digits of ``n``.
 
     Examples:
         >>> sum_digits(42)
@@ -134,6 +148,7 @@ def nlogspace(start, stop, num=50):
 # 
 # All those contributions are dual-licensed under the MIT license for use
 # in typhon, and the GNU General Public License version 3.
+
 
 def promote_maximally(x):
     """Return copy of x with high precision dtype.

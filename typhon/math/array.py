@@ -1,4 +1,18 @@
-"""Functions operating on arrays
+"""
+Array calculations
+==================
+
+Functions operating on arrays
+
+.. currentmodule:: typhon.math
+
+.. autosummary::
+   :toctree: generated
+
+   limit_ndarray
+   localmin
+   mad_outliers
+   parity
 
 """
 
@@ -13,6 +27,7 @@
 import numpy
 import scipy.stats
 
+
 def localmin(arr):
     """Find local minima for 1-D array
 
@@ -22,7 +37,7 @@ def localmin(arr):
 
     Arguments:
 
-        localmin (numpy.ndarray): 1-D ndarray for which to find local
+        arr (numpy.ndarray): 1-D ndarray for which to find local
             minima.  Should have a numeric dtype.
 
     Returns:
@@ -170,7 +185,7 @@ def mad_outliers(arr, cutoff=10, mad0="raise"):
                 numpy.arange(50, 99, 1),
                 numpy.linspace(99, 100, 100)]
             pad = scipy.stats.scoreatpercentile(ad, perc)
-            if (pad==0).all(): # all constant…?
+            if (pad == 0).all():  # all constant…?
                 raise ValueError("These data are weird!")
             p_i = pad.nonzero()[0][0]
             cutoff *= (100 - 50) / (100 - perc[p_i])
