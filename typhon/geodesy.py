@@ -1,9 +1,38 @@
-# -*- coding: utf-8 -*-
+"""
+===============================
+Geodesy (:mod:`typhon.geodesy`)
+===============================
 
-"""Functions for handling geographical coordinate systems
-and reference ellipsoids.
+Functions for handling geographical coordinate systems and reference
+ellipsoids.
 
-Unless otherwise stated functions are ported from atmlab-2-3-181.
+Unless otherwise stated functions are ported from ``atmlab-2-3-181``.
+
+.. currentmodule:: typhon.geodesy
+
+.. autosummary::
+   :toctree: generated
+
+   asind
+   cart2geocentric
+   cart2geodetic
+   cartposlos2geocentric
+   cosd
+   ellipsoid2d
+   ellipsoid_r_geocentric
+   ellipsoid_r_geodetic
+   ellipsoidcurvradius
+   ellipsoidmodels
+   geocentric2cart
+   geocentric2geodetic
+   geocentricposlos2cart
+   geodetic2cart
+   geodetic2geocentric
+   geographic_mean
+   great_circle_distance
+   inrange
+   sind
+   tand
 
 """
 import numpy as np
