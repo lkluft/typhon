@@ -1,12 +1,23 @@
-#!/usr/bin/python
+"""
+====================================
+Configuration (:mod:`typhon.config`)
+====================================
 
-"""Handle specific configuration settings, such as data locations.
+.. currentmodule:: typhon.config
+
+Handle specific configuration settings, such as data locations.
 
 Configuration is handled with a configuration file with a
 :mod:`configparser` syntax.
 
 The location of the configuration file is determined by the environment
-variable TYPHONRC.  If this is not set, it will use ~/.typhonrc.
+variable ``TYPHONRC``.  If this is not set, it will use ``~/.typhonrc``.
+
+.. autosummary::
+   :toctree: generated
+
+   conf
+
 """
 
 import pathlib
