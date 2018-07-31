@@ -1,5 +1,21 @@
-# -*- coding: utf-8 -*-
-"""Statistical functions for binary cloud masks. """
+"""
+Cloud statistics
+================
+
+Statistical functions for binary cloud masks.
+
+.. currentmodule:: typhon.cloudmask
+
+.. autosummary::
+   :toctree: generated
+
+   get_cloudproperties
+   neighbor_distance
+   iorg
+   scai
+
+"""
+
 import numpy as np
 import scipy as sc
 

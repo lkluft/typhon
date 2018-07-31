@@ -1,6 +1,15 @@
-# -*- coding: utf-8 -*-
+"""
+====================================
+Cloud mask (:mod:`typhon.cloudmask`)
+====================================
 
-"""Functions related to cloud masks."""
+Functions related to cloud masks.
+
+.. currentmodule:: typhon.cloudmask
+
+.. automodule:: typhon.cloudmask.cloudstatistics
+
+"""
 
 from typhon.cloudmask.cloudstatistics import *  # noqa
 
