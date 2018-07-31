@@ -1,7 +1,23 @@
-# -*- coding: utf-8 -*-
-
-"""Functions directly related to atmospheric sciences.
 """
+Atmosphere
+==========
+
+Functions directly related to atmospheric sciences.
+
+.. currentmodule:: typhon.physics
+
+.. autosummary::
+   :toctree: generated
+
+   relative_humidity2vmr
+   vmr2relative_humidity
+   integrate_water_vapor
+   moist_lapse_rate
+   standard_atmosphere
+   pressure2height
+
+"""
+
 import numpy as np
 from scipy.interpolate import interp1d
 

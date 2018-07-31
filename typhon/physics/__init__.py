@@ -1,6 +1,19 @@
-# -*- coding: utf-8 -*-
+"""
+===============================
+Physics (:mod:`typhon.physics`)
+===============================
 
-"""Various physics-related modules."""
+.. currentmodule:: typhon.physics
+
+.. automodule:: typhon.physics.atmosphere
+
+.. automodule:: typhon.physics.em
+
+.. automodule:: typhon.physics.metrology
+
+.. automodule:: typhon.physics.thermodynamics
+
+"""
 
 from typhon import constants  # noqa
 from typhon.physics.atmosphere import *  # noqa

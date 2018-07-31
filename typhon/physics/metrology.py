@@ -1,6 +1,17 @@
-"""Functions related to metrology
+"""
+Metrology
+=========
 
-All functions in this module need sympy.
+Functions related to metrology. All functions in this module need ``sympy``.
+
+.. currentmodule:: typhon.physics
+
+.. autosummary::
+   :toctree: generated
+
+   express_uncertainty
+   recursive_args
+
 """
 
 # Any commits made to this module between 2015-05-01 and 2019-03-01
@@ -13,6 +24,7 @@ All functions in this module need sympy.
 
 import itertools
 import warnings
+
 
 def express_uncertainty(expr, aliases={}, on_failure="raise",
         collect_failures=None, return_sensitivities=False,

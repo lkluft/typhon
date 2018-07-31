@@ -1,7 +1,27 @@
-# -*- coding: utf-8 -*-
-
-"""Functions related to water vapor and its thermodynamic effects
 """
+Thermodynamics
+==============
+
+Functions related to water vapor and its thermodynamic effects.
+
+.. currentmodule:: typhon.physics
+
+.. autosummary::
+   :toctree: generated
+
+   density
+   e_eq_ice_mk
+   e_eq_water_mk
+   e_eq_mixed_mk
+   mixing_ratio2specific_humidity
+   mixing_ratio2vmr
+   specific_humidity2mixing_ratio
+   specific_humidity2vmr
+   vmr2mixing_ratio
+   vmr2specific_humidity
+
+"""
+
 from functools import lru_cache
 
 import numpy as np

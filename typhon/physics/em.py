@@ -1,7 +1,36 @@
-# -*- coding: utf-8 -*-
-
-"""Module for anything related to the electromagnetic spectrum.
 """
+Electromagnetic Spectrum
+========================
+
+Module for anything related to the electromagnetic spectrum.
+
+.. currentmodule:: typhon.physics
+
+.. autosummary::
+   :toctree: generated
+
+   planck
+   planck_wavelength
+   planck_wavenumber
+   rayleighjeans
+   rayleighjeans_wavelength
+   radiance2planckTb
+   radiance2rayleighjeansTb
+   snell
+   fresnel
+   frequency2wavelength
+   frequency2wavenumber
+   wavelength2frequency
+   wavelength2wavenumber
+   wavenumber2frequency
+   wavenumber2wavelength
+   stefan_boltzmann_law
+   zeeman_splitting
+   zeeman_strength
+   zeeman_transitions
+
+"""
+
 import numpy as np
 
 from typhon import constants
