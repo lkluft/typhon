@@ -1,11 +1,32 @@
+"""
+.. currentmodule:: typhon.files
+
+.. autosummary::
+   :toctree: generated
+
+   FileHandler
+   FileInfo
+
+File handlers for common formats
+++++++++++++++++++++++++++++++++
+
+.. autosummary::
+   :toctree: generated
+
+   CSV
+   HDF4
+   HDF5
+   NetCDF4
+   Plotter
+   expects_file_info
+
+"""
 from collections import defaultdict
 from copy import copy
 from datetime import datetime
 from functools import wraps
-import glob
 from inspect import signature, ismethod
 import os
-import pickle
 import warnings
 
 import netCDF4
@@ -40,9 +61,6 @@ __all__ = [
     'NetCDF4',
     'Plotter',
     'expects_file_info',
-    # 'Numpy',
-    # 'Pickle',
-    # 'XML'
 ]
 
 

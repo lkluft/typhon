@@ -1,16 +1,15 @@
 from datetime import datetime, timedelta
 
 import numpy as np
-import numexpr as ne
 from netCDF4 import Dataset
 from scipy.interpolate import CubicSpline
-from typhon.utils import Timer
 import xarray as xr
 
 from .common import NetCDF4, expects_file_info
 from .testers import check_lat_lon
 
 __all__ = [
+    'AAPP_HDF',
     'AVHRR_GAC_HDF',
     'MHS_HDF',
 ]

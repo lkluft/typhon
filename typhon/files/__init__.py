@@ -1,6 +1,18 @@
-# -*- coding: utf-8 -*-
+"""
+===================================
+File handling (:mod:`typhon.files`)
+===================================
 
-"""This module contains convenience functions for general file handling.
+This module contains convenience functions for general file handling.
+
+.. module:: typhon.files
+
+.. automodule:: typhon.files.utils
+
+.. automodule:: typhon.files.fileset
+
+.. automodule:: typhon.files.handlers
+
 """
 
 from .fileset import *

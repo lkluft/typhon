@@ -1,3 +1,16 @@
+"""
+.. currentmodule:: typhon.files
+
+.. autosummary::
+   :toctree: generated
+
+   compress
+   compress_as
+   decompress
+   get_compressor
+   is_compression_format
+
+"""
 import bz2
 import gzip
 import os
@@ -7,7 +20,10 @@ import zipfile
 from contextlib import contextmanager
 
 __all__ = [
-    'compress', 'compress_as', 'decompress',
+    'compress',
+    'compress_as',
+    'decompress',
+    'get_compressor',
     'is_compression_format',
 ]
 

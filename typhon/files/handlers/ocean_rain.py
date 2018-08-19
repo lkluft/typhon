@@ -1,3 +1,12 @@
+"""
+.. currentmodule:: typhon.files
+
+.. autosummary::
+   :toctree: generated
+
+   OceanRAIN
+
+"""
 from .common import NetCDF4, expects_file_info
 
 __all__ = [

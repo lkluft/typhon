@@ -1,8 +1,6 @@
 from datetime import datetime
-import warnings
 
 import numpy as np
-import xarray as xr
 
 from .common import HDF4, expects_file_info
 

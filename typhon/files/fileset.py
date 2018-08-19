@@ -1,7 +1,18 @@
 """
+FileSet
+=======
+
 This module contains classes to handle datasets consisting of many files.
 
-Created by John Mrziglod, June 2017
+.. currentmodule:: typhon.files
+
+.. autosummary::
+   :toctree: generated
+
+   FileSet
+   FileSetManager
+
+.. codeauthor:: John Mrziglod, June 2017
 """
 
 import atexit
