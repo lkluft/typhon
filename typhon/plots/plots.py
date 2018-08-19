@@ -1,6 +1,27 @@
-# -*- coding: utf-8 -*-
+"""
+Plots
+=====
 
-"""Functions to create plots using matplotlib.
+Functions to create plots using matplotlib.
+
+.. currentmodule:: typhon.plots
+
+.. autosummary::
+   :toctree: generated
+
+   binned_statistic
+   plot_distribution_as_percentiles
+   heatmap
+   histogram
+   scatter_density_plot_matrix
+   diff_histogram
+   profile_p
+   profile_p_log
+   profile_z
+   channels
+   colored_bars
+   plot_bitfield
+
 """
 
 import collections

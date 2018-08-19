@@ -1,6 +1,18 @@
-# -*- coding: utf-8 -*-
+"""
+.. currentmodule:: typhon.plots
 
-"""Utility functions related to plotting.
+.. autosummary::
+   :toctree: generated
+
+   center_colorbar
+   figsize
+   styles
+   get_available_styles
+   get_subplot_arrangement
+   label_axes
+   supcolorbar
+   sorted_legend_handles_labels
+
 """
 import glob
 import itertools

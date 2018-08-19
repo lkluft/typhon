@@ -1,6 +1,30 @@
-# -*- coding: utf-8 -*-
+"""
+==============================
+Plotting (:mod:`typhon.plots`)
+==============================
 
-"""This module provides functions related to plot or to plot data.
+This module provides functions related to plot or to plot data.
+
+.. module:: typhon.plots
+
+.. automodule:: typhon.plots.common
+
+.. automodule:: typhon.plots.colors
+
+.. automodule:: typhon.plots.formatter
+
+.. automodule:: typhon.plots.maps
+
+.. automodule:: typhon.plots.plots
+
+.. automodule:: typhon.plots.arts_lookup
+
+Typhon style sheet
+==================
+
+.. plot:: pyplots/stylesheet_gallery.py
+    :include-source:
+
 """
 
 from typhon.plots import cm  # noqa

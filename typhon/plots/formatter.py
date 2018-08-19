@@ -1,5 +1,21 @@
-# -*- coding: utf-8 -*-
-"""Custom tick formatter. """
+"""
+Formatter
+=========
+
+Custom tick formatter.
+
+.. currentmodule:: typhon.plots
+
+.. autosummary::
+   :toctree: generated
+
+   set_xaxis_formatter
+   set_yaxis_formatter
+   HectoPascalFormatter
+   HectoPascalLogFormatter
+   ScalingFormatter
+
+"""
 import matplotlib.pyplot as plt
 from matplotlib.ticker import LogFormatter, FuncFormatter
 

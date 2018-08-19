@@ -1,5 +1,18 @@
-# -*- coding: utf-8 -*-
-"""Functions related to plotting maps. """
+"""
+Maps
+====
+
+Functions related to plotting maps (*requires cartopy*).
+
+.. currentmodule:: typhon.plots
+
+.. autosummary::
+   :toctree: generated
+
+   worldmap
+   get_cfeatures_at_scale
+
+"""
 from collections import namedtuple
 
 try:

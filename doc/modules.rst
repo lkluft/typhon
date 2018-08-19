@@ -16,6 +16,7 @@ Reference
    typhon.oem
    typhon.physics
    typhon.plots
+   typhon.plots.cm
    typhon.spectroscopy
    typhon.trees
    typhon.utils

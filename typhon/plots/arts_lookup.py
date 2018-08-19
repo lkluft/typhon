@@ -1,6 +1,16 @@
-"""Visualize an absorption lookup table.
+"""
+ARTS
+====
 
-Author: oliver.lemke@uni-hamburg.de
+Visualize an absorption lookup table.
+
+.. currentmodule:: typhon.plots
+
+.. autosummary::
+   :toctree: generated
+
+   plot_arts_lookup
+
 """
 import re
 from itertools import zip_longest

@@ -1,6 +1,23 @@
-# -*- coding: utf-8 -*-
+"""
+Colors
+======
 
-"""Utility functions related to plotting.
+.. currentmodule:: typhon.plots
+
+.. autosummary::
+   :toctree: generated
+
+   mpl_colors
+   cmap2rgba
+   colors2cmap
+   cmap2act
+   cmap2c3g
+   cmap2cpt
+   cmap2ggr
+   cmap2txt
+   cmap_from_act
+   cmap_from_txt
+
 """
 import os
 import re
