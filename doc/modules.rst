@@ -12,7 +12,6 @@ Reference
    typhon.files
    typhon.geodesy
    typhon.geographical
-   typhon.latex
    typhon.math
    typhon.oem
    typhon.physics
