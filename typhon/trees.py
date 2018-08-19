@@ -1,20 +1,31 @@
 """
+==================================
+Search trees (:mod:`typhon.trees`)
+==================================
+
 Module that provides classes for tree creation and handling.
 
 Trees are powerful structures to sort a huge amount of data and to speed up
 performing query requests on them significantly.
+
+.. module:: typhon.trees
+
+.. autosummary::
+   :toctree: generated
+
+   IntervalTree
+   IntervalTreeNode
+   RangeTree
+
 """
 
-from collections import Iterable
-
-import pandas as pd
-import numba
 import numpy as np
 
 from sklearn.neighbors import BallTree, KDTree
 
 __all__ = [
     "IntervalTree",
+    "IntervalTreeNode",
     "RangeTree",
 ]
 
