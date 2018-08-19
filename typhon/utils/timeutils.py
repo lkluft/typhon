@@ -1,6 +1,21 @@
-# -*- coding: utf-8 -*-
+"""
+Time utils
+==========
 
-"""This module contains functions for python's datetime/timedelta objects
+This module contains functions for python's datetime/timedelta objects
+
+.. currentmodule:: typhon.utils
+
+.. autosummary::
+   :toctree: generated
+
+   date2num
+   num2date
+   set_time_resolution
+   to_datetime
+   to_timedelta
+   Timer
+
 """
 import functools
 import time

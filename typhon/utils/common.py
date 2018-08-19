@@ -1,6 +1,28 @@
-# -*- coding: utf-8 -*-
+"""
+.. currentmodule:: typhon.utils
 
-"""Miscellaneous convenience functions.
+.. autosummary::
+   :toctree: generated
+
+   deprecated
+   extract_block_diag
+   safe_eval
+   unique
+   path_append
+   path_prepend
+   path_remove
+   get_time_dimensions
+   get_time_coordinates
+   concat_each_time_coordinate
+   undo_xarray_floatification
+   image2mpeg
+   stack_xarray_repdim
+   split_units
+   reraise_with_stack
+   get_xarray_groups
+   add_xarray_groups
+   to_array
+
 """
 
 import ast

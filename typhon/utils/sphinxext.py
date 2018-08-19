@@ -1,6 +1,16 @@
-# -*- coding: utf-8 -*-
+"""
+Sphinx extensions
+=================
 
-"""This module contains custom roles to use in Sphinx.
+This module contains custom roles to use in Sphinx.
+
+.. currentmodule:: typhon.utils
+
+.. autosummary::
+   :toctree: generated
+
+   arts_docserver_role
+
 """
 from docutils import nodes
 

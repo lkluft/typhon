@@ -6,7 +6,7 @@ from tempfile import mkstemp
 
 import numpy as np
 
-from typhon import latex
+from typhon.utils import latex
 
 
 class TestLaTeX:

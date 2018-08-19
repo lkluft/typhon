@@ -1,6 +1,13 @@
-# -*- coding: utf-8 -*-
 """
-Implementation of functions related to LaTeX.
+LaTeX
+=====
+
+.. currentmodule:: typhon.utils
+
+.. autosummary::
+   :toctree: generated
+
+   texify_matrix
 
 """
 

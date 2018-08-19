@@ -1,4 +1,14 @@
-"""Utilities related to caching and memoisation
+"""
+Caching and memoisation
+=======================
+
+.. currentmodule:: typhon.utils
+
+.. autosummary::
+   :toctree: generated
+
+   mutable_cache
+
 """
 
 # Any commits made to this module between 2015-05-01 and 2017-03-01
