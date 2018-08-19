@@ -1,6 +1,20 @@
-# -*- coding: utf-8 -*-
+"""
+=========================================
+Spectroscopy (:mod:`typhon.spectroscopy`)
+=========================================
 
-"""Functions directly related to spectroscopy.
+Functions directly related to spectroscopy.
+
+.. module:: typhon.spectroscopy
+
+.. autosummary::
+   :toctree: generated
+
+   linewidth
+   doppler_broadening
+   boltzmann_level
+   stimulated_emission
+
 """
 import numpy as np
 from scipy import interpolate
