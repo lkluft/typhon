@@ -1,5 +1,13 @@
-# -*- coding: utf-8 -*-
-"""Functions concerning the Optimal Estimation Method (OEM).
+"""
+.. currentmodule:: typhon.oem
+
+.. autosummary::
+   :toctree: generated
+
+   error_covariance_matrix
+   averaging_kernel_matrix
+   retrieval_gain_matrix
+
 """
 
 from scipy.linalg import inv

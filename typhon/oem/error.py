@@ -1,5 +1,17 @@
-# -*- coding: utf-8 -*-
-"""Functions to estimate the different sources of retrieval error.
+"""
+Retrieval error
+===============
+
+Functions to estimate the different sources of retrieval error.
+
+.. currentmodule:: typhon.oem
+
+.. autosummary::
+   :toctree: generated
+
+   smoothing_error
+   retrieval_noise
+
 """
 
 from typhon.oem import common

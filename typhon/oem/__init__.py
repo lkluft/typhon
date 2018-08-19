@@ -1,5 +1,16 @@
-# -*- coding: utf-8 -*-
-"""Collection of functions concerning the Optimal Estimation Method (OEM).
+"""
+=======================
+OEM (:mod:`typhon.oem`)
+=======================
+
+Functions related to the Optimal Estimation Method (OEM).
+
+.. module:: typhon.oem
+
+.. automodule:: typhon.oem.common
+
+.. automodule:: typhon.oem.error
+
 """
 
 from typhon.oem.common import *  # noqa
