@@ -1,6 +1,24 @@
-# -*- coding: utf-8 -*-
+"""
+=====================================
+Atmosphere (:mod:`typhon.atmosphere`)
+=====================================
 
-"""Functions directly related to atmospheric sciences.
+.. deprecated:: v0.6.0
+   Use :mod:`typhon.physics.atmosphere` instead.
+
+Functions directly related to atmospheric sciences.
+
+.. module:: typhon.atmosphere
+
+.. autosummary::
+   :toctree: generated
+
+   iwv
+   moist_lapse_rate
+   relative_humidity
+   vmr
+   standard_atmosphere
+
 """
 import numpy as np
 from scipy.interpolate import interp1d
