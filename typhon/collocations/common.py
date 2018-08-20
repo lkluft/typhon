@@ -1,9 +1,16 @@
 """
-This module provides classes and functions to find collocations between
-filesets and datasets. They are inspired by the CollocatedDataset classes in
-atmlab implemented by Gerrit Holl.
+.. currentmodule:: typhon.collocations
 
-Created by John Mrziglod, June 2017
+.. autosummary::
+   :toctree: generated
+
+   Collocator
+   Collocations
+   collapse
+   expand
+   check_collocation_data
+
+.. codeauthor:: John Mrziglod, June 2017
 """
 
 import numba
@@ -19,6 +26,7 @@ __all__ = [
     "Collocator",
     "Collocations",
     "expand",
+    "check_collocation_data",
 ]
 
 

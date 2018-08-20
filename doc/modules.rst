@@ -6,6 +6,7 @@ Reference
    typhon.arts
    typhon.atmosphere
    typhon.cloudmask
+   typhon.collocations
    typhon.config
    typhon.constants
    typhon.environment

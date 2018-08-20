@@ -1,11 +1,17 @@
 """
-This module contains classes to find collocations between datasets. They are
-inspired by the implemented CollocatedDataset classes in atmlab written by
-Gerrit Holl.
+================================================
+Collocation Toolkit (:mod:`typhon.collocations`)
+================================================
 
-TODO: I would like to have this package as typhon.collocations.
+This module contains classes to find collocations between datasets.
+They are inspired by the implemented ``CollocatedDataset`` classes
+in ``atmlab`` written by Gerrit Holl.
 
-Created by John Mrziglod, June 2017
+.. module:: typhon.collocations
+
+.. automodule:: typhon.collocations.common
+
+.. codeauthor:: John Mrziglod, June 2017
 """
 
 from .collocator import *  # noqa
