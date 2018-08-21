@@ -1,12 +1,13 @@
-# -*- coding: utf-8 -*-
+"""
+SPARE-ICE
+=========
 
-"""Implementation of SPARE-ICE
+.. currentmodule: typhon.retrieval
 
-This is a reimplementation of the toolkit developed by Gerrit Holl for atmlab.
+.. automodule:: typhon.retrieval.spareice._common
 
-TODO: Extend documentation and credits.
 """
 
-from .common import *
+from ._common import *
 
 __all__ = [s for s in dir() if not s.startswith('_')]

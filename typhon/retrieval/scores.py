@@ -1,6 +1,20 @@
-r"""
+"""
+Retrieval scores
+=================
+
 This module contains functions for the computations of scores for assessment
 of retrieval methods.
+
+.. currentmodule: typhon.retrieval
+
+.. autosummary::
+   :toctree: generated
+
+   mape
+   bias
+   quantile_score
+   mean_quantile_score
+
 """
 import numpy as np
 

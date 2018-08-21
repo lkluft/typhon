@@ -1,57 +1,67 @@
-"""Retrieval of IWP from passive radiometers
+"""
+.. currentmodule:: typhon.retrieval
+
+Retrieval of IWP from passive radiometers
 
 This class is a reimplementation of the SPARE-ICE product introduced by
-Holl et al. 2014.
+[Holl]_ et al. 2014.
 
-References:
-    TODO: Add reference.
+.. autosummary::
+   :toctree: generated
+
+   SPAREICE
+
+.. [Holl] Holl, G., S. Eliasson, J. Mendrok, and S. A. Buehler (2014),
+   SPARE-ICE: synergistic Ice Water Path from passive operational sensors,
+   J. Geophys. Res., 119(3), 1504–1523, doi:10.1002/2013JD020759.
 
 Examples:
 
     .. code-block:: python
 
-    from typhon.files import AVHRR_GAC_HDF, CloudSat, FileSet, MHS_HDF
-    from typhon.retrieval import SPAREICE
+        from typhon.files import AVHRR_GAC_HDF, CloudSat, FileSet, MHS_HDF
+        from typhon.retrieval import SPAREICE
 
-    cloudsat = FileSet(...)
-    mhs = FileSet(...)
-    avhrr = FileSet(...)
+        cloudsat = FileSet(...)
+        mhs = FileSet(...)
+        avhrr = FileSet(...)
 
-    spareice = SPAREICE(
-        file="spareice.json",
-    )
+        spareice = SPAREICE(
+            file="spareice.json",
+        )
 
-    # Either we have already collocated, then we can use the files directly for
-    # the training or SPARE-ICE should create the training dataset by itself
-    # (should collocate by itself).
-    data = spareice.prepare_training_data(
-        # Do we have already collocations with all instruments? Put them here:
-        collocations=...,
-        # OR
-        cloudsat=cloudsat, mhs=mhs, avhrr=avhrr,
-        # Which time period should be used for training?
-        start=..., end=...,
-    )
+        # Either we have already collocated, then we can use the files directly for
+        # the training or SPARE-ICE should create the training dataset by itself
+        # (should collocate by itself).
+        data = spareice.prepare_training_data(
+            # Do we have already collocations with all instruments? Put them here:
+            collocations=...,
+            # OR
+            cloudsat=cloudsat, mhs=mhs, avhrr=avhrr,
+            # Which time period should be used for training?
+            start=..., end=...,
+        )
 
-    # To save time and memory space, we can store the current object with
-    # the training data to the disk and reuse it later directly. So, we do not
-    # have to call spareice.prepare_training_data again:
-    data.to_netcdf("spareice_training.nc")
+        # To save time and memory space, we can store the current object with
+        # the training data to the disk and reuse it later directly. So, we do not
+        # have to call spareice.prepare_training_data again:
+        data.to_netcdf("spareice_training.nc")
 
-    # Train SPARE-ICE with the data
-    spareice.train(data, test_ratio=0.2)
+        # Train SPARE-ICE with the data
+        spareice.train(data, test_ratio=0.2)
 
-    # After training, we can use the SPARE-ICE retrieval:
-    spareice.retrieve(
-        # Do we have already collocations with MHS and AVHRR? Put them here:
-        collocations=...,
-        # Otherwise we can put here each fileset and create collocations
-        # on-the-fly
-        mhs=mhs, avhrr=avhrr,
-        # Which time period should be used for retrieving?
-        start=..., end=...,
-        output=...,
-    )
+        # After training, we can use the SPARE-ICE retrieval:
+        spareice.retrieve(
+            # Do we have already collocations with MHS and AVHRR? Put them here:
+            collocations=...,
+            # Otherwise we can put here each fileset and create collocations
+            # on-the-fly
+            mhs=mhs, avhrr=avhrr,
+            # Which time period should be used for retrieving?
+            start=..., end=...,
+            output=...,
+        )
+
 """
 from ast import literal_eval
 import itertools

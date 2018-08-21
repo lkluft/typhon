@@ -1,13 +1,5 @@
-"""
-Bayesian Montecarlo Integration.
-
-Contains the `BMCI` class which implements the Bayesian Monte Carlo
-Integration (BMCI) method as proposed by Evans et al. in [Evans]_.
-
-.. [Evans] Evans, F. K. et al. Submillimeter-Wave Cloud Ice Radiometer: Simulations
-   of retrieval algorithm performance. Journal of Geophysical Research 107, 2002
-"""
 import numpy as np
+
 
 class BMCI:
     r"""

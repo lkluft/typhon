@@ -1,9 +1,21 @@
 """
-The mcmc submodule.
-===================
+The MCMC submodule
+==================
 
 Contains the MCMC which implements the Marcov Chain Monte Carlo method to
 sample from a posterior distribution of a retrieval problem.
+
+.. currentmodule:: typhon.retrieval.mcmc
+
+.. autosummary::
+   :toctree: generated
+
+   MCMC
+   r_factor
+   variogram
+   split
+   autocorrelation
+   effective_sample_size
 
 References
 ==========
@@ -12,6 +24,15 @@ References
 
 """
 import numpy as np
+
+__all__ = [
+    'r_factor',
+    'variogram',
+    'split',
+    'autocorrelation',
+    'effective_sample_size',
+    'MCMC',
+]
 
 
 def r_factor(stats):

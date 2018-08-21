@@ -1,7 +1,15 @@
+"""
+.. currentmodule:: typhon.retrieval
+
+.. autosummary::
+   :toctree: generated
+
+   RetrievalProduct
+
+"""
 from ast import literal_eval
 import copy
 from importlib import import_module
-import json
 
 import numpy as np
 import pandas as pd

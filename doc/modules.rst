@@ -18,6 +18,7 @@ Reference
    typhon.physics
    typhon.plots
    typhon.plots.cm
+   typhon.retrieval
    typhon.spectroscopy
    typhon.trees
    typhon.utils

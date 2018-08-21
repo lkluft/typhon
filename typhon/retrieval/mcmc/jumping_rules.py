@@ -4,8 +4,16 @@ Jumping rules for MCMC
 
 This module contains classes that implement jumping rules for MCMC.
 
+.. currentmodule:: typhon.retrieval.mcmc
+
+.. autosummary::
+   :toctree: generated
+
+   RandomWalk
+
 """
 import numpy as np
+
 
 class RandomWalk:
     """
