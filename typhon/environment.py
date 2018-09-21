@@ -1,5 +1,9 @@
-# -*- coding: utf-8 -*-
-"""Handling of environment variables.
+"""
+==============================================
+Environment settings (:class:`typhon.environ`)
+==============================================
+
+Handling of environment variables.
 
 Implements a mapping object for environment variables.
 
