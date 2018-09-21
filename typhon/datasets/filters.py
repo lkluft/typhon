@@ -1,4 +1,27 @@
-"""Collection of classes related to filtering
+"""
+Filters (:mod:`typhon.datasets.dataset`)
+========================================
+
+Collection of classes related to filtering
+
+.. currentmodule:: typhon.datasets.filters
+
+.. autosummary::
+   :toctree: generated
+
+   FilterError
+   FirstlineDBFilter
+   HIRSBestLineFilter
+   HIRSCalibCountFilter
+   HIRSFlagger
+   HIRSPRTTempFilter
+   HIRSTimeSequenceDuplicateFilter
+   MEDMAD
+   NullLineFilter
+   OrbitFilter
+   OutlierFilter
+   OverlapFilter
+   TimeMaskFilter
 
 """
 

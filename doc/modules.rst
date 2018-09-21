@@ -9,6 +9,7 @@ Reference
    typhon.collocations
    typhon.config
    typhon.constants
+   typhon.datasets
    typhon.environment
    typhon.files
    typhon.geodesy

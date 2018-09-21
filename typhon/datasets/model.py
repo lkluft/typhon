@@ -1,4 +1,16 @@
-"""Datasets for models
+"""
+Model (:mod:`typhon.datasets.model`)
+====================================
+
+Datasets for models.
+
+.. currentmodule:: typhon.datasets.model
+
+.. autosummary::
+   :toctree: generated
+
+   ERAInterim
+
 """
 
 # Any commits made to this module between 2015-05-01 and 2017-03-01

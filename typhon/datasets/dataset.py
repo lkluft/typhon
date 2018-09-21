@@ -1,4 +1,29 @@
-"""Module containing classes abstracting datasets
+"""
+:mod:`typhon.datasets.dataset`
+==============================
+
+Module containing classes abstracting datasets.
+
+.. currentmodule:: typhon.datasets.dataset
+
+.. autosummary::
+   :toctree: generated
+
+   DataFileError
+   Dataset
+   DatasetDeque
+   GranuleLocatorError
+   HomemadeDataset
+   HyperSpectral
+   InvalidDataError
+   InvalidFileError
+   MiB
+   MultiFileDataset
+   MultiSatelliteDataset
+   NetCDFDataset
+   SingleFileDataset
+   SingleMeasurementPerFileDataset
+
 """
 
 # Any commits made to this module between 2015-05-01 and 2017-03-01

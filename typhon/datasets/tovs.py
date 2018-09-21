@@ -1,8 +1,34 @@
-"""Datasets for TOVS/ATOVS
+"""
+TOVS/ATOVS (:mod:`typhon.datasets.tovs`)
+========================================
+
+Datasets for TOVS/ATOVS
 
 This module imports typhon.physics.units and therefore has a soft
 dependency on the pint units library.  Import this module only if you can
 accept such a dependency.
+
+.. currentmodule:: typhon.datasets.tovs
+
+.. autosummary::
+   :toctree: generated
+
+   ATOVS
+   HIASI
+   HIRS
+   HIRS2
+   HIRS2I
+   HIRS3
+   HIRS4
+   HIRSHIRS
+   HIRSKLM
+   HIRSPOD
+   IASIEPS
+   IASISub
+   MHSL1C
+   Radiometer
+   TOVSCollocatedDataset
+
 """
 
 # Any commits made to this module between 2015-05-01 and 2017-03-01
