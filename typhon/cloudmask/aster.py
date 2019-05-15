@@ -10,6 +10,7 @@ import numpy as np
 from skimage.measure import block_reduce
 
 from typhon.math import multiple_logical
+from .cloudflags import CloudFlags as cf
 
 
 __all__ = [
@@ -261,7 +262,7 @@ class ASTERimage:
 
         Parameters:
             output_binary (bool): Switch between binary and full cloud mask
-                flags.
+                flags (see :class:`CloudFlags`).
                 binary: 0 - clear (flag 2 & flag 3)
                         1 - cloudy (flag 4 & flag 5)
                 full:   2 - confidently clear
@@ -317,31 +318,54 @@ class ASTERimage:
         r12 = r1 / r2
 
         ### TEST 1-4 ###
-        # Set cloud mask to default "confidently clear".
-        clmask = np.ones(r1.shape, dtype=np.float) * 2
+        # Initialize cloud mask to default "confidently clear".
+        clmask = np.ones(r1.shape, dtype=np.float)
+        clmask *= cf.CONFIDENTLY_CLEAR
 
         with np.warnings.catch_warnings():
             np.warnings.filterwarnings('ignore', r'invalid value encountered')
 
             # Set "probably clear" pixels.
-            clmask[multiple_logical(r3N > 0.03, r5 > 0.01, 0.7 < r3N2,
-                                    r3N2 < 1.75, r12 < 1.45,
-                                    func=np.logical_and)] = 3
-
+            boolean_mask = multiple_logical(
+                r3N > 0.03,
+                r5 > 0.01,
+                0.7 < r3N2,
+                r3N2 < 1.75,
+                r12 < 1.45,
+                func=np.logical_and
+            )
+            clmask[boolean_mask] = cf.PROBABLY_CLEAR
 
             # Set "probably cloudy" pixels.
-            clmask[multiple_logical(r3N > 0.03, r5 > 0.015, 0.75 < r3N2,
-                                    r3N2 < 1.75, r12 < 1.35,
-                                    func=np.logical_and)] = 4
+            boolean_mask = multiple_logical(
+                r3N > 0.03,
+                r5 > 0.015,
+                0.75 < r3N2,
+                r3N2 < 1.75,
+                r12 < 1.35,
+                func=np.logical_and
+            )
+            clmask[boolean_mask] = cf.PROBABLY_CLOUDY
 
             # Set "confidently cloudy" pixels
-            clmask[multiple_logical(r3N > 0.065, r5 > 0.02, 0.8 < r3N2,
-                                    r3N2 < 1.75, r12 < 1.2,
-                                    func=np.logical_and)] = 5
+            boolean_mask = multiple_logical(
+                r3N > 0.065,
+                r5 > 0.02,
+                0.8 < r3N2,
+                r3N2 < 1.75,
+                r12 < 1.2,
+                func=np.logical_and
+            )
+            clmask[boolean_mask] = cf.CONFIDENTLY_CLOUDY
 
             # Combine swath edge pixels.
-            clmask[multiple_logical(np.isnan(r1), np.isnan(r2), np.isnan(r3N),
-                                    np.isnan(r5), func=np.logical_or)] = np.nan
+            boolean_mask = multiple_logical(
+                np.isnan(r1),
+                np.isnan(r2),
+                np.isnan(r3N),
+                np.isnan(r5),
+                func=np.logical_or)
+            clmask[boolean_mask] = np.nan
 
         if include_thermal_test:
             ### TEST 5 ###
@@ -350,17 +374,22 @@ class ASTERimage:
             # labeled pixels, are overwritten with "confidently clear".
 
             # Check for available "confidently clear" pixels.
-            nc = np.sum(clmask == 2) / np.sum(~np.isnan(clmask))
+            nc = np.sum(clmask == cf.CONFIDENTLY_CLEAR)
+            nc /= np.sum(~np.isnan(clmask))
             if (nc > 0.03):
-                bt14_p05 = np.nanpercentile(bt14[clmask == 2], 5)
+                bt14_p05 = np.nanpercentile(
+                    bt14[clmask == cf.CONFIDENTLY_CLEAR], 5
+                )
             else:
                 # If less than 3% of pixels are "confidently clear", test 5
                 # cannot be applied according to Werner et al., 2016. However,
                 # a sensitivity study showed that combining "probably clear"
                 # and "confidently clear" pixels in such cases leads to
                 # plausible results and we derive a threshold correspondingly.
-                bt14_p05 = np.nanpercentile(bt14[np.logical_or(clmask == 2,
-                                                               clmask == 3)],5)
+                bt14_p05 = np.nanpercentile(
+                    bt14[np.logical_or(clmask == cf.CONFIDENTLY_CLEAR,
+                                       clmask == cf.PROBABLY_CLEAR)],
+                    5)
 
             with np.warnings.catch_warnings():
                 np.warnings.filterwarnings('ignore',
@@ -368,14 +397,18 @@ class ASTERimage:
                 # Pixels with brightness temperature values above the 5th
                 # percentile of clear ocean pixels are overwritten with
                 # "confidently clear".
-                clmask[np.logical_and(bt14 > bt14_p05, ~np.isnan(clmask))] = 2
+                boolean_mask = np.logical_and(
+                    bt14 > bt14_p05, ~np.isnan(clmask))
+                clmask[boolean_mask] = cf.CONFIDENTLY_CLEAR
 
             # Combine swath edge pixels.
             clmask[np.logical_or(np.isnan(clmask), np.isnan(bt14))] = np.nan
 
         if output_binary:
-            clmask[np.logical_or(clmask == 2, clmask == 3)] = 0 # clear
-            clmask[np.logical_or(clmask == 4, clmask == 5)] = 1 # cloudy
+            clmask[np.logical_or(clmask == cf.CONFIDENTLY_CLEAR,
+                                 clmask == cf.PROBABLY_CLOUDY)] = cf.CLEAR
+            clmask[np.logical_or(clmask == cf.CONFIDENTLY_CLOUDY,
+                                 clmask == cf.PROBABLY_CLOUDY)] = cf.CLOUDY
 
         return clmask
 
